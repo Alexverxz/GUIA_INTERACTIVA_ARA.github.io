@@ -1,0 +1,67 @@
+{
+  "perfiles": [
+    {
+      "id": "dev",
+      "titulo": "Desarrollo Full Stack y Móvil",
+      "descripcion": "Dominio de Programación Orientada a Objetos y Programación Móvil para crear aplicaciones escalables de alto impacto."
+    },
+    {
+      "id": "sec",
+      "titulo": "Infraestructura y Ciberseguridad",
+      "descripcion": "Protección de redes, sistemas operativos y blindaje de la información digital ante amenazas actuales."
+    },
+    {
+      "id": "ai",
+      "titulo": "Arquitectura de Software e Inteligencia Artificial",
+      "descripcion": "Diseño de estructuras robustas de código y sistemas inteligentes aplicando modelos de vanguardia."
+    }
+  ],
+  "modulos": [
+    {
+      "semestre": "Semestres Iniciales",
+      "fase": "Fundamentos y Lógica",
+      "detalle": "Programación Orientada a Objetos, Estructura de Datos y Matemáticas Discretas."
+    },
+    {
+      "semestre": "Semestres Intermedios",
+      "fase": "Ingeniería y Diseño",
+      "detalle": "Arquitectura de Software, Taller de Base de Datos y Sistemas Operativos."
+    },
+    {
+      "semestre": "Semestres Avanzados",
+      "fase": "Especialización Tecnológica",
+      "detalle": "Programación Móvil, Programación Web e Inteligencia Artificial."
+    }
+  ],
+  "instalaciones": [
+    {
+      "id": "labs",
+      "titulo": "Laboratorios Especializados de Cómputo y Redes",
+      "descripcion": "Se cuenta con un laboratorio equipado con switches para desarrollar aplicaciones de Cisco y realizar prácticas avanzadas de conexiones de internet, permitiendo a los estudiantes experimentar de forma directa con la infraestructura de redes y telecomunicaciones."
+    },
+    {
+      "id": "proyectos",
+      "titulo": "Proyectos Colaborativos y Torneos Estudiantiles",
+      "descripcion": "Fomento al trabajo en equipo y la metodología ágil. Como muestra del talento estudiantil, en el 2026 se organizó el primer torneo de robots hecho por los propios estudiantes, los cuales compitieron enfrentándose a diversos circuitos de retos y obstáculos."
+    },
+    {
+      "id": "hackatec",
+      "titulo": "Innovación y Desarrollo: Evento Académico HACKATEC",
+      "descripcion": "Asimismo, dentro de esta Cumbre, se desarrolla el evento académico HACKATEC, que promueve el Tecnológico Nacional de México y cuyo objetivo es desarrollar y proponer soluciones innovadoras a problemáticas definidas por empresas públicas o privadas, en un encuentro de equipos de estudiantes, que trabajan de manera colaborativa durante horas continuas; aplicando tecnologías de vanguardia que permitan generar la mejor solución a la problemática planteada.",
+      "equipos": [
+        {
+          "nombre": "Equipo INTELLIGENZ",
+          "reto": "Reto: Energía y Cambio Climático",
+          "integrantes": "Estudiantes de IAM: Emily Odemaris Austria Matías, Flor María Granadero Ramírez y Víctor Manuel Pérez Díaz; de ISC: Jesús Andrés García Benítez; y de IIN: Floriana Ramírez Santiago.",
+          "asesor": "Asesorado por el Ing. Eduardo Robles Hernández (docente de Ingeniería Ambiental)."
+        },
+        {
+          "nombre": "Equipo MAPACHESTEC",
+          "reto": "Reto: Turismo y Transporte",
+          "integrantes": "Estudiantes de IIN: Ilse Esmeralda Vidales López y José Luis Hernández Trejo; de IAM: José Alejandro González Hernández; de IGE: Carlos David Beas Rubio; y de ISC: Mateo Policarpo Bautista.",
+          "asesor": "Asesorado por el Ing. Gaudencio Antonio Benito (docente de Ingeniería Industrial)."
+        }
+      ]
+    }
+  ]
+}

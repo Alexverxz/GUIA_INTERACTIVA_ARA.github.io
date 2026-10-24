@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Interactiva - ISC | TecNM Tamazunchale</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .hero {
+            min-height: 70vh;
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
+        }
+        .gallery-img {
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero text-white d-flex align-items-center justify-content-center text-center p-5">
+        <div class="container">
+            <span class="badge bg-primary bg-opacity-25 text-info border border-info mb-3 px-3 py-2 rounded-pill">TecNM Campus Tamazunchale</span>
+            <h1 class="display-5 fw-bold mb-3">Ingeniería en Sistemas Computacionales</h1>
+            <p class="lead text-light mb-4 mx-auto" style="max-width: 600px;">Diseña el futuro digital con bases sólidas, desarrollo móvil, POO y Arquitectura de Software.</p>
+            <a href="#modulos" class="btn btn-outline-info px-4 py-2">Explorar Guía Interactiva</a>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main id="modulos" class="container my-5" style="max-width: 900px;">
+        
+        <!-- MÓDULO 1: TEST VOCACIONAL ASÍNCRONO -->
+        <section class="card border-0 shadow-sm p-4 mb-4">
+            <h2 class="h5 fw-bold text-dark mb-2">Módulo 1: Descubre tu Perfil Profesional</h2>
+            <p class="text-muted small mb-3">Selecciona un área de especialización:</p>
+            <div class="row g-2 mb-3">
+                <div class="col-md-4">
+                    <button class="btn btn-light border w-100 text-start py-2 text-dark small" onclick="cargarPerfil('dev')">💻 Desarrollo Web y Móvil</button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-light border w-100 text-start py-2 text-dark small" onclick="cargarPerfil('sec')">🛡️ Ciberseguridad y Redes</button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-light border w-100 text-start py-2 text-dark small" onclick="cargarPerfil('ai')">🤖 Arquitectura e Inteligencia Artificial</button>
+                </div>
+            </div>
+            <div id="resultado-perfil" class="alert alert-secondary bg-light border-0 border-start border-primary border-4 py-2 px-3 small text-muted" style="display: none;"></div>
+        </section>
+
+        <!-- MÓDULO 2: RUTA CURRICULAR -->
+        <section class="card border-0 shadow-sm p-4 mb-4">
+            <h2 class="h5 fw-bold text-dark mb-2">Módulo 2: Ruta Curricular y Enfoque Técnico</h2>
+            <p class="text-muted small mb-3">Evolución académica destacando la <strong>Arquitectura de Software</strong>, Programación Orientada a Objetos y Apps Móviles:</p>
+            <div id="timeline-container" class="border-start border-2 border-primary ps-3 ms-2">
+                <!-- Se inyecta asíncronamente desde data.json -->
+            </div>
+        </section>
+
+        <!-- MÓDULO 3: INSTALACIONES E INNOVACIÓN CON CLIC EN IMÁGENES -->
+        <section class="card border-0 shadow-sm p-4 mb-4">
+            <h2 class="h5 fw-bold text-dark mb-2">Módulo 3: Entorno Tecnológico e Innovación</h2>
+            <p class="text-muted small mb-3">Haz clic en cualquiera de las imágenes para consultar la información detallada:</p>
+            
+            <div class="row g-3 mb-3">
+                <div class="col-md-4 text-center">
+                    <img src="img/imagen promocional evento 2.jpg" alt="Laboratorio" class="gallery-img w-100 shadow-sm mb-2" onclick="cargarInstalacion('labs')">
+                    <span class="small fw-bold text-primary" style="cursor:pointer;" onclick="cargarInstalacion('labs')">💻 Laboratorios</span>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="img/imagen promocional evento.jpg" alt="Colaboración" class="gallery-img w-100 shadow-sm mb-2" onclick="cargarInstalacion('proyectos')">
+                    <span class="small fw-bold text-primary" style="cursor:pointer;" onclick="cargarInstalacion('proyectos')">👥 Proyectos</span>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="img/imagen promocional evento 3.jpg" alt="Hackatec" class="gallery-img w-100 shadow-sm mb-2" onclick="cargarInstalacion('hackatec')">
+                    <span class="small fw-bold text-primary" style="cursor:pointer;" onclick="cargarInstalacion('hackatec')">🚀 HACKATEC</span>
+                </div>
+            </div>
+
+            <!-- Cuadro dinámico donde se despliega la información debajo de las imágenes -->
+            <div id="resultado-instalacion" class="alert alert-secondary bg-light border-0 border-start border-primary border-4 py-3 px-3 small text-muted" style="display: none;"></div>
+        </section>
+
+        <!-- MÓDULO 4: INSCRIPCIÓN / CTA -->
+        <section class="card border-0 shadow-sm p-4 text-center bg-white">
+            <h2 class="h5 fw-bold text-dark mb-2">Módulo 4: ¡Forma Parte de la Comunidad ISC!</h2>
+            <p class="text-muted small mb-3">Consulta la convocatoria oficial y da el primer paso hacia tu futuro profesional.</p>
+            <a href="https://tamazunchale.tecnm.mx/itstmz/" target="_blank" class="btn btn-primary px-4">Sitio Oficial TecNM Tamazunchale</a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-4 text-muted small border-top bg-white">
+        <p class="mb-0">2026 TecNM Campus Tamazunchale - Ingeniería en Sistemas Computacionales</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
